@@ -45,7 +45,7 @@ WORKDIR /opt/
 RUN git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
 WORKDIR /opt/riscv-gnu-toolchain/
 RUN ./configure --prefix=/opt/riscv --with-arch=rv32i --with-abi=ilp32
-RUN make linux
+RUN make
 ENV PATH="/opt/riscv/rv32i/bin:${PATH}"
 WORKDIR /opt/
 RUN rm -rf riscv-gnu-toolchain/
